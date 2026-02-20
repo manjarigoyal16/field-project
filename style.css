@@ -42,6 +42,65 @@ nav {
     line-height: 1.2;
 }
 
+.video-container {
+    width: 100%;
+    height: 100vh; /* Makes it full screen height */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Keeps video behind text */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video fills the space without stretching */
+}
+
+.video-content {
+    text-align: center;
+    color: #fff;
+}
+
+.video-content h1 {
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.video-content h1 span {
+    color: #3473c0;
+}
+
+/* Adds a dark overlay so text is easier to read over the video */
+.video-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Adjust 0.4 for more/less darkness */
+    z-index: 0;
+}
+
+.video-content {
+    z-index: 1; /* Keeps text above the dark overlay */
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .video-content h1 {
+        font-size: 40px;
+    }
+}
+
+
+
 /* .header-wrapper {
     display: flex;
     align-items: center;
