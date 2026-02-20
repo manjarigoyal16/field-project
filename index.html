@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="BerryMint.Co.Production house,Marketing agency and Micro drama series.">
+    <meta name="keywords" content="BerryMint,Production house,Marketing agency,Micro drama series">
+    <title> BerryMint.Co </title>
+    <link rel="stylesheet" href="style.css">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> -->
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+
+
+</head>
+
+<body>
+    <div id="header"></div>
+    
+        <!-- <nav >
+            <img src="professional/logo.png.jpeg" alt="" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+
+        </nav> -->
+      <nav class="navi">
+    <img src="professional/logo.png.jpeg" alt="Logo" class="logo">
+    <ul id="sidemenu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+    </ul>
+    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+</nav>
+<div class="container">
+        <!-- <div class="header-text">
+            <p>Owner</p>
+            <h1>Hi, I am <span>Vidit </span>Saboo</h1>
+        </div> -->
+    
+    <div class="header-wrapper">
+    <div class="header-text">
+        <p>Production House</p>
+        <h1>Welcome to <span>BerryMint.Co</span> </h1>
+    </div>
+    <div class="header-image">
+        <img src="professional/pic.jpeg " alt="Vidit Saboo">
+    </div>
+</div>
+</div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="about-col-1">
+                    <img src="professional/pic.jpeg" alt="" id="pic">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, I’m Harsha Udhlani, a passionate problem-solver and aspiring software engineer from Khandwa.
+                        I recently graduated from UIT RGPV, Bhopal, with a CGPA of 8.02, where I honed my skills in data
+                        structures, algorithms, and frontend development.
+
+                        With over 400 problems solved on LeetCode, I thrive on tackling challenging coding problems and
+                        crafting efficient solutions. I’ve also built a strong foundation in modern web technologies
+                        like React, HTML, and CSS.
+
+                        I am driven by a love for learning and creating impactful projects. Currently, I am exploring
+                        ways
+                        to visualize algorithms through interactive tools, combining my technical expertise with
+                        creativity.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab " id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br> Building Websites (Frontend)</li>
+                            <li><span>DSA</span><br>Having knowledge of various data structures and algorithms</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024</span><br> B.Tech from UIT RGPV (8.02 CGPA)</li>
+                            <li><span>2020</span><br>Higher Secondary from Carmel Convent School (85.6%)</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- services
+     -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+
+
+                <div>
+                    <i class="fa-solid fa-globe"></i>
+                    <h1>Web Development</h1>
+                    <br>
+                    <p>I specialize in creating dynamic, user-friendly web applications using modern frontend
+                        technologies like React, HTML, CSS, and JavaScript. My focus is on writing clean, maintainable
+                        code and delivering responsive designs that enhance user experience. I enjoy turning ideas into
+                        interactive digital experiences, always aiming for performance and accessibility.</p>
+
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h1>DSA</h1>
+                    <br>
+                    <p>With a strong grasp of core computer science concepts, I have solved 400+ problems on LeetCode in
+                        C++ , sharpening my skills in problem-solving and optimizing algorithms. My expertise spans
+                        arrays, linked lists, trees, stacks, queues, and recursion, making me adept at developing
+                        efficient solutions to complex challenges</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- my work -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work </h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="professional/food searching app.png" alt="Food Searching Project">
+                    <div class="layer">
+                        <h3>Food Searching Website</h3>
+                        <p>I developed a food-searching website using React, enabling users to discover recipes
+                            effortlessly. By entering a dish name or ingredients, the application fetches and displays a
+                            variety of recipes, making meal planning simple and fun. This project showcases my skills in
+                            React, API integration, and building intuitive user interfaces.</p>
+                        <a href="https://food-searching-app-one.vercel.app/"><i class="fa-solid fa-link"></i></a>
+
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="professional/news web.png" alt="News Website">
+                    <div class="layer">
+                        <h3>News Website</h3>
+                        <p>I created a news website using React that brings all types of news to users with just a
+                            single click. This project emphasizes seamless API integration and an efficient,
+                            user-friendly interface for real-time news updates. It demonstrates my expertise in React
+                            and delivering responsive web applications.</p>
+                        <a href="https://news-web-nu-three.vercel.app/"><i class="fa-solid fa-link"></i></a>
+
+                    </div>
+                </div>
+
+            </div>
+            <a href="work.html" class="btn">See More</a>
+        </div>
+    </div>
+    <!-- contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>udhlani02h@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>6263991013</p>
+                    <div class="social-icons">
+                        <a
+                            href="https://www.linkedin.com/in/harsha-udhlani-15a21b282?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                class="fa-brands fa-linkedin"></i></a>
+
+                        <a href="https://github.com/Harsha-Udhlani"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="Harsha_Udhlani_SDE.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; Harsha. </p>
+        </div>
+    </div>
+    <script src="script.js">
+
+    </script>
+</body>
+
+</html>
