@@ -5,6 +5,8 @@
     box-sizing: border-box;
 }
 
+
+
 html {
     scroll-behavior: hidden;
 }
@@ -276,7 +278,7 @@ nav ul li a:hover::after {
 #about {
     padding: 50px 0;
     color: #8ec1ff;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 .row {
@@ -576,11 +578,20 @@ form .btn2 {
 
 .copyright {
     width: 100%;
-    text-align: center;
-    padding: 25px 0;
+    /* text-align: center; */
+    /* padding: 25px 0; */
     background: #343434;
-    font-weight: 300;
-    margin-top: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+    padding: 25px ;
+}
+
+.sub-title {
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 /* small screen css */
