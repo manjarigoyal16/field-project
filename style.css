@@ -6,7 +6,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: hidden;
 }
 
 body {
@@ -15,53 +15,98 @@ body {
 }
 
 .navi {
-   padding-right: 20px;
-   position: sticky;
+    /* padding-right: 20px; */
+    position: sticky;
 }
 
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* This pushes logo left and ul right */
+    justify-content: space-between;
+    /* This pushes logo left and ul right */
     /* padding: 20px 0; Vertical spacing */
-    position: sticky; /* Optional: keeps nav at top while scrolling */
+    position: sticky;
+    /* Optional: keeps nav at top while scrolling */
     top: 0;
-    background: #000; /* Ensures background stays solid when scrolling */
+    background: #000;
+    /* Ensures background stays solid when scrolling */
     z-index: 100;
 }
+.header-text {
+    flex: 0;                  /* Takes up half the space */
+}
 
-.header-wrapper {
+.header-text h1 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* .header-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
    
-}
+} */
 
-.header-text {
+
+/* .header-text {
     flex: 1;
     font-size: 30px;
 
+} */
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    /* Vertically centers text and image */
+    justify-content: center;
+    /* Pushes text to left, image to right */
+    /* gap: 50px; */
+    /* Space between text and image */
+    /* margin-top: 50px; */
+    /* padding: 20px 0; */
 }
+
+
 
 .header-image {
     flex: 1;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .header-image img {
-    width: 80%; /* Adjust size as needed */
+    /* width: 80%;
     max-width: 400px;
-    border-radius: 50%; /* Keeps that circular look you had */
-    /* border: 5px solid #3473c0; */
-
+    border-radius: 50%; 
+    border: 5px solid #3473c0; */
+    width: 350px;
+    /* Adjust size as needed */
+    height: 350px;
+    object-fit: cover;
+    /* Ensures the photo doesn't stretch */
+    border-radius: 50%;
+    /* Keeps it circular like your screenshot */
+    border: 8px solid #3473c0;
+    /* Match your brand blue */
+    box-shadow: 0 10px 30px rgba(52, 115, 192, 0.3);
 
 }
 
+@media only screen and (max-width: 768px) {
+    .header-wrapper {
+        flex-direction: column-reverse;
+        /* Stacks them on phones */
+        text-align: center;
+    }
+}
 
 
 .container {
     padding: 10px 10%;
-    
+
 }
 
 
@@ -70,7 +115,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-   
+
 }
 
 
@@ -78,30 +123,38 @@ nav {
     width: 100px
     
 } */
- .logo {
-    width: 100px; /* Slightly larger for visibility */
+.logo {
+    width: 100px;
+    /* Slightly larger for visibility */
     cursor: pointer;
     /* width: 140px;                 Size adjustment */
     height: auto;
-    border-radius: 12px;         /* Softens the sharp corners of the image */
-    border: 1px solid #3473c0;   /* A thin line to define the edges */
+    border-radius: 12px;
+    /* Softens the sharp corners of the image */
+    border: 1px solid #3473c0;
+    /* A thin line to define the edges */
     padding: 2px;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
-    
+
     /* Creates a soft blue aura around the navy box */
     box-shadow: 0 0 15px rgba(52, 115, 192, 0.2);
 }
 
 .logo:hover {
-    transform: translateY(-3px) scale(1.05); /* Lifts and grows slightly */
-    border-color: #ffffff;                  /* Border turns white on hover */
-    box-shadow: 0 10px 25px rgba(52, 115, 192, 0.5); /* Stronger glow */
-    filter: brightness(1.1);                 /* Makes the whites pop more */
+    transform: translateY(-3px) scale(1.05);
+    /* Lifts and grows slightly */
+    border-color: #ffffff;
+    /* Border turns white on hover */
+    box-shadow: 0 10px 25px rgba(52, 115, 192, 0.5);
+    /* Stronger glow */
+    filter: brightness(1.1);
+    /* Makes the whites pop more */
 }
 
 nav ul {
-    display: flex; /* Makes the list items stay in a row */
+    display: flex;
+    /* Makes the list items stay in a row */
     align-items: center;
 }
 
@@ -113,7 +166,8 @@ nav ul {
 
 nav ul li {
     list-style: none;
-    margin-left: 40px; /* Spacing between the text links */
+    margin-left: 40px;
+    /* Spacing between the text links */
 }
 
 nav .fa-bars {
@@ -156,14 +210,14 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-    color:#3473c0;
+    color: #3473c0;
 }
 
 /* about */
 #about {
-    padding: 80px 0;
+    padding: 50px 0;
     color: #8ec1ff;
-    margin-top: 250px;
+    margin-top: 10px;
 }
 
 .row {
@@ -356,7 +410,7 @@ nav ul li a:hover::after {
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
-    background:#ffffff;
+    background: #ffffff;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -426,7 +480,7 @@ nav ul li a:hover::after {
 }
 
 .social-icons a:hover {
-    color:#3473c0;
+    color: #3473c0;
     transform: translateY(-5px);
 }
 
