@@ -16,6 +16,16 @@ body {
     color: #fff;
 }
 
+/* Update all headings and sub-titles to brand blue globally */
+h1, h2, h3, .sub-title, .sub-title3 {
+    color: #3473c0 !important;
+}
+
+/* Ensure paragraph text remains white throughout */
+p, .tab-contents ul li, .services-list div, .contact-left p {
+    color: #ffffff;
+}
+
 .navi {
     /* padding-right: 20px; */
     position: sticky;
@@ -271,15 +281,68 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-    color: #3473c0;
+    color: #ffffff;
 }
 
 /* about */
 #about {
     padding: 50px 0;
-    color: #8ec1ff;
+    color: #ffffff;
     /* margin-top: 10px; */
 }
+
+
+
+/* Container for the 'Who We Are' content */
+.who-we-are-container {
+    margin-top: 60px;    /* Space from the row above */
+    text-align: center;  /* Centers all text inside */
+    width: 100%;
+}
+
+/* Specific heading style to match logo color */
+.sub-title3 {
+    font-size: 50px;     /* Adjusted for better hierarchy */
+    font-weight: 600;
+    color: #3473c0;      /* Logo Blue */
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* .who-we-are-container p {
+    color: #ffffff;      
+    max-width: 800px;    
+    margin: 0 auto;      
+    font-size: 18px;
+}
+.who-we-are-container {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('professional/bts-bg.jpg');
+    background-attachment: fixed; 
+    background-size: cover;
+    padding: 80px 20px;
+    border-radius: 20px;
+} */
+
+.who-we-are-container {
+    margin-top: 100px;
+    padding: 60px;
+    background: linear-gradient(145deg, #0a0a0a, #151515);
+    border-radius: 30px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Responsive adjustment for small screens */
+@media only screen and (max-width: 600px) {
+    .sub-title3 {
+        font-size: 35px;
+    }
+    .who-we-are-container p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+}
+
 
 .row {
     display: flex;
@@ -303,11 +366,15 @@ nav ul li a:hover::after {
 .about-col-2 {
     flex-basis: 60%;
 }
+.about-col-2 .sub-title {
+    color: #3473c0; /* BerryMint Logo Blue */
+}
+
 
 .sub-title {
     font-size: 60px;
     font-weight: 600;
-    color: white;
+    color:  #3473c0;
 }
 
 .tab-titles {
@@ -361,32 +428,69 @@ nav ul li a:hover::after {
     padding: 30px 0;
 }
 
+/* Services Section Headings */
+.services h1.sub-title, 
+.services-list div h2 {
+    color: #3473c0; /* Logo Blue */
+}
+
+/* Portfolio / My Work Section Headings */
+.services h1.sub-title, 
+.layer h3 {
+    color: #3473c0; /* Logo Blue */
+}
+
+/* Ensure all paragraph and general text remains white */
+.services-list div p, 
+.layer p,
+.services-list div a {
+    color: #ffffff;
+}
+
+/* Optional: Keep the 'Who We Are' heading blue as well */
+.sub-title3 {
+    color: #3473c0;
+}
+
 .services-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
     margin-top: 50px;
 
 }
 
-.services-list div {
+/* .services-list div {
     background: #4a4a4a;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
     transition: background 0.5s, tranform 0.5s;
+} */
+
+.services-list div {
+    background: #111111; /* Slightly lighter than pure black */
+    padding: 50px 30px;
+    font-size: 14px;
+    border-radius: 15px;
+    border: 1px solid #222; /* Subtle border */
+    transition: all 0.4s ease-in-out;
+    text-align: center;
 }
 
 .services-list div i {
     font-size: 50px;
     margin-bottom: 30px;
+    color: #3473c0; /* Logo Blue */
+    display: block;
 }
 
 .services-list div h2 {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
+    color: #3473c0; /* Logo Blue */
 }
 
 .services-list div a {
@@ -398,9 +502,40 @@ nav ul li a:hover::after {
 }
 
 .services-list div:hover {
-    background-color: #0073ff;
+    background-color: #0073ff48;
     transform: translateY(-10px);
+    border-color: #3473c0;
+    box-shadow: 0 15px 30px rgba(52, 115, 192, 0.3);
 
+}
+.services-list div:hover {
+    background: var(--brand-blue);
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(52, 115, 192, 0.4);
+}
+
+.services-list div:hover h2, 
+.services-list div:hover p, 
+.services-list div:hover i {
+    color: #ffffff !important;
+}
+
+@media only screen and (max-width: 992px) {
+    .services-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Phones (1 box) */
+@media only screen and (max-width: 650px) {
+    .services-list {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    
+    .services-list div {
+        padding: 40px 20px;
+    }
 }
 
 /* my work */
