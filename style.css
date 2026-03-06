@@ -768,6 +768,7 @@
     /* small screen css */
     nav .fa-solid {
         display: none;
+        padding-right : 20px;
     }
 
     @media only screen and (max-width:600px) {
@@ -841,6 +842,7 @@
         position: relative;
         z-index: 1001;
         cursor: pointer;
+        padding-right: 20px;
         }
     }
 
