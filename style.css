@@ -295,7 +295,7 @@
 
     /* Container for the 'Who We Are' content */
     .who-we-are-container {
-        margin-top: 60px;    /* Space from the row above */
+        margin-top: 0px;    /* Space from the row above */
         text-align: center;  /* Centers all text inside */
         width: 100%;
     }
@@ -325,7 +325,7 @@
      
 
     .who-we-are-container {
-        margin-top: 100px;
+        margin-top: 0px;
         padding: 60px;
         background: linear-gradient(145deg, #0a0a0a, #151515);
         border-radius: 30px;
@@ -1028,7 +1028,7 @@
             border-top: 1px solid #1e293b;
             padding-top: 15px;
         }#contact-page {
-    padding: 100px 0;
+    padding: 0px;
     background: #000;
 }
 
