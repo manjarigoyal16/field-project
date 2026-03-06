@@ -582,14 +582,12 @@
     }
 
     .work-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-        grid-gap: 40px;
-        margin-top: 50px;
-
-
-    }
-
+    display: grid;
+    /* Changed 450px to 300px for better responsiveness */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-gap: 40px;
+    margin-top: 50px;
+}
 
 
     .work {
@@ -600,15 +598,16 @@
 
     }
 
+   
+
     .work img {
-
-        height: 450px;
-        width: 100%;
-        border-radius: 10px;
-        display: block;
-        transition: transform 0.5s;
-
-    }
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Maintains a professional widescreen look */
+    object-fit: cover; /* Prevents stretching */
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
 
     .layer {
         width: 100%;
@@ -662,6 +661,30 @@
     .work:hover .layer {
         height: 100%;
     }
+
+    @media only screen and (max-width: 600px) {
+    .work-list {
+        grid-template-columns: 1fr; /* Force single column on small phones */
+        grid-gap: 20px;
+    }
+
+    .layer h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .layer p {
+        font-size: 12px; /* Smaller text so it fits the overlay */
+        line-height: 1.4;
+    }
+
+    .layer a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+    }
+}
 
     .btn {
         display: block;
