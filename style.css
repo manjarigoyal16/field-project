@@ -363,6 +363,7 @@
     width: 100%;
     padding: 10px 0; /* Adds breathing room inside the white bar */
     /* margin: 5px 0;  Adds space between this and other sections */
+    background: #5d689023;
 }
 
 .elite-title {
