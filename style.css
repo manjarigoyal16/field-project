@@ -3,16 +3,18 @@
         padding: 0;
         font-family: 'Poppins', 'sans-serif';
         box-sizing: border-box;
-        background-image: url("professional/about-bg.png");
+        
+    }
+
+#bg {
+    background-image: url("professional/about-bg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    /* makes background static */
+    
     background-attachment: fixed;
-    }
-
-
+}
 
     /* html {
         scroll-behavior: hidden;
@@ -357,10 +359,10 @@
 
 #elite-work {
     /* padding: 60px 0 100px; */
-    background-color: #ffffff47; /* Sets the white background seen in reference */
+    
     width: 100%;
     padding: 10px 0; /* Adds breathing room inside the white bar */
-    margin: 5px 0;  /* Adds space between this and other sections */
+    /* margin: 5px 0;  Adds space between this and other sections */
 }
 
 .elite-title {
@@ -390,6 +392,7 @@
     align-items: center;
     height: 100px; /* Fixed height ensures uniform grid alignment */
     width: 100%;
+    background: none;
 }
 
 /* Base styling for all logos */
@@ -432,30 +435,22 @@
      
 
     .who-we-are-container {
-
     max-width: 1000px;
-    margin: auto;
-    margin-top: 40px;
-
-    padding:20px 50px;
+    margin: 40px auto;
+    padding: 20px 50px;
     border-radius: 24px;
-
     text-align: center;
+    margin-bottom: 0px;
 
-    /* card background */
-    background: rgba(10, 10, 10, 0);
+    /* CHANGE THIS: Give it a very slight dark tint instead of 0 transparency */
+    background: rgba(255, 255, 255, 0.03); 
 
-    /* premium glass blur */
-    backdrop-filter: blur(10px);
+    /* THIS IS KEY: It blurs the page background behind the box */
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px); /* Safari support */
 
-    /* subtle border */
-    border: 1px solid rgba(255,255,255,0.08);
-
-    /* depth shadow */
-    box-shadow:
-        0 20px 60px rgba(0,0,0,0.8),
-        0 0 30px rgba(52,115,192,0.15);
-
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.8), 0 0 30px rgba(52,115,192,0.15);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
