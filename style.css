@@ -352,19 +352,6 @@
         
     }
 
-    /* .who-we-are-container p {
-        color: #ffffff;      
-        max-width: 800px;    
-        margin: 0 auto;      
-        font-size: 18px;
-    }
-    .who-we-are-container {
-        background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('professional/bts-bg.jpg');
-        background-attachment: fixed; 
-        background-size: cover;
-        padding: 80px 20px;
-        border-radius: 20px;
-    } */
      
 
     .who-we-are-container {
@@ -396,7 +383,9 @@
 }
 
 .who-we-are-container:hover{
-    transform: translateY(-8px);
+    /* transform: translateY(-8px); */
+     border-color: #5077a5;
+    transform: translateY(-10px);
 
     box-shadow:
         0 30px 80px rgba(0,0,0,0.9),
@@ -1326,3 +1315,142 @@ button[type="submit"]:hover {
 #msg.error {
     color: #ff4d4d;
 }
+
+/* --- Premium About Page Styles --- */
+
+#about-hero {
+    padding: 10px 0;
+    position: relative;
+
+    
+}
+#new-about{
+    background-image: url("professional/about-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* makes background static */
+    background-attachment: fixed;
+
+}
+
+.hero-flex {
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.sub-title span {
+    color: #fff;
+}
+
+.abstract-logo-box {
+    position: relative;
+    text-align: center;
+}
+
+#hero-logo-img {
+    width: 80%;
+    max-width: 400px;
+    filter: drop-shadow(0 0 20px rgba(52, 115, 192, 0.3));
+    border-radius: 20px;
+     transform: translateX(-120px);
+    animation: logoSwipe 1.4s ease forwards;
+
+}
+
+/* --- Founder Section --- */
+#founders {
+    padding: 20px 0;
+    text-align: center;
+     position: relative;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: #aaa;
+}
+
+.founder-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.founder-card {
+    background: #6463631e;
+    border: 1px solid #222;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.founder-card:hover {
+    border-color: #5077a5;
+    transform: translateY(-10px);
+}
+
+.founder-img img {
+    width: 75%;
+    aspect-ratio: 1/1;
+    object-fit:contain;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.founder-info h3 {
+    color: #fff !important;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.founder-info p {
+    color: #3473c0;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.founder-socials {
+    margin-top: 15px;
+}
+
+.founder-socials a {
+    color: #555;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.founder-socials a:hover {
+    color: #fff;
+}
+
+/* --- Vision/Mission Flex --- */
+.values-flex {
+    display: flex;
+    /* gap: 30px; */
+    margin: 20px;
+}
+
+@media (max-width: 768px) {
+    .values-flex {
+        flex-direction: column;
+    }
+    .hero-flex {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
+
