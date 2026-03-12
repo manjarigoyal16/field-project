@@ -7,9 +7,13 @@
 
 
 
-    html {
+    /* html {
         scroll-behavior: hidden;
-    }
+    } */
+
+    html {
+    scroll-behavior: smooth;
+}
 
     body {
         background-color: #000000;
@@ -160,9 +164,9 @@
         /* Ensures the photo doesn't stretch */
         border-radius: 50%;
         /* Keeps it circular like your screenshot */
-        border: 8px solid #3473c0;
+        /* border: 8px solid #3473c0; */
         /* Match your brand blue */
-        box-shadow: 0 10px 30px rgba(52, 115, 192, 0.3);
+        /* box-shadow: 0 10px 30px rgba(52, 115, 192, 0.3); */
 
     }
 
@@ -186,8 +190,32 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+        /* padding: 10px 8%; */
+        background: #000;
+        
 
     }
+
+#pic {
+    width: 100%;
+    border-radius: 15px;
+    opacity: 0;
+    transform: translateX(-120px);
+    animation: logoSwipe 1.4s ease forwards;
+}
+
+@keyframes logoSwipe {
+    from {
+        opacity: 0;
+        transform: translateX(-120px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+   
 
 
     /* .logo {
@@ -195,31 +223,32 @@
         
     } */
     .logo {
-        width: 100px;
+        width: auto;
+        object-fit: contain;
         /* Slightly larger for visibility */
-        cursor: pointer;
-        /* width: 140px;                 Size adjustment */
-        height: auto;
-        border-radius: 12px;
+        /* cursor: pointer; */
+        /* width: 140px;                 */
+        height: 60px;
+        border-radius: 10px;
         /* Softens the sharp corners of the image */
-        border: 1px solid #3473c0;
+        /* border: 1px solid #3473c0; */
         /* A thin line to define the edges */
-        padding: 2px;
+        padding: 5px;
         cursor: pointer;
-        transition: all 0.4s ease-in-out;
+        transition:  transform 0.4s ease, filter 0.4s ease;
 
         /* Creates a soft blue aura around the navy box */
-        box-shadow: 0 0 15px rgba(52, 115, 192, 0.2);
+        /* box-shadow: 0 0 15px rgba(52, 115, 192, 0.2); */
     }
 
     .logo:hover {
-        transform: translateY(-3px) scale(1.05);
+        transform: scale(1.08);
         /* Lifts and grows slightly */
         border-color: #ffffff;
         /* Border turns white on hover */
         box-shadow: 0 10px 25px rgba(52, 115, 192, 0.5);
         /* Stronger glow */
-        filter: brightness(1.1);
+        filter:drop-shadow(0 0 10px rgba(52,115,192,0.6));
         /* Makes the whites pop more */
     }
 
@@ -285,20 +314,33 @@
     }
 
     /* about */
-    #about {
-        padding: 50px 0;
-        color: #ffffff;
-        /* margin-top: 10px; */
-    }
+    /* about section background */
+#about{
+    padding: 120px 0;
+    position: relative;
+
+    background-image: url("professional/about-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* makes background static */
+    background-attachment: fixed;
+}
+#services {
+     
+    position: relative;
+
+    background-image: url("professional/about-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* makes background static */
+    background-attachment: fixed;
+}
 
 
-
-    /* Container for the 'Who We Are' content */
-    .who-we-are-container {
-        margin-top: 0px;    /* Space from the row above */
-        text-align: center;  /* Centers all text inside */
-        width: 100%;
-    }
 
     /* Specific heading style to match logo color */
     .sub-title3 {
@@ -307,6 +349,7 @@
         color: #3473c0;      /* Logo Blue */
         margin-bottom: 20px;
         display: block;
+        
     }
 
     /* .who-we-are-container p {
@@ -325,13 +368,48 @@
      
 
     .who-we-are-container {
-        margin-top: 0px;
-        padding: 60px;
-        background: linear-gradient(145deg, #0a0a0a, #151515);
-        border-radius: 30px;
-        text-align: center;
-        border: 1px solid rgba(255,255,255,0.05);
-    }
+
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 40px;
+
+    padding:20px 50px;
+    border-radius: 24px;
+
+    text-align: center;
+
+    /* card background */
+    background: rgba(10, 10, 10, 0.85);
+
+    /* premium glass blur */
+    backdrop-filter: blur(10px);
+
+    /* subtle border */
+    border: 1px solid rgba(255,255,255,0.08);
+
+    /* depth shadow */
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.8),
+        0 0 30px rgba(52,115,192,0.15);
+
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.who-we-are-container:hover{
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.9),
+        0 0 40px rgba(52,115,192,0.35);
+}
+
+.who-we-are-container p{
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #e6e6e6;
+}
 
     /* Responsive adjustment for small screens */
     @media only screen and (max-width: 600px) {
@@ -357,12 +435,7 @@
         ;
     }
 
-    #pic {
-        width: 100%;
-        border-radius: 15px;
-        /* height: 40%; */
-
-    }
+   
 
     .about-col-2 {
         flex-basis: 60%;
@@ -577,6 +650,16 @@
     /* my work */
     #portfolio {
         padding: 0px;
+         
+    position: relative;
+
+    background-image: url("professional/about-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* makes background static */
+    background-attachment: fixed;
 
 
     }
@@ -688,7 +771,7 @@
 
     .btn {
         display: block;
-        margin: 50px auto;
+        margin: 10px auto;
         width: fit-content;
         border: 1px solid #3473c0;
         padding: 14px 50px;
@@ -1052,9 +1135,21 @@
             color: #94a3b8;
             border-top: 1px solid #1e293b;
             padding-top: 15px;
-        }#contact-page {
+        }
+        
+        #contact-page {
     padding: 0px;
     background: #000;
+     
+    position: relative;
+
+    background-image: url("professional/about-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* makes background static */
+    background-attachment: fixed;
 }
 
 .contact-header {
