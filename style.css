@@ -3,6 +3,13 @@
         padding: 0;
         font-family: 'Poppins', 'sans-serif';
         box-sizing: border-box;
+        background-image: url("professional/about-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* makes background static */
+    background-attachment: fixed;
     }
 
 
@@ -316,16 +323,11 @@
     /* about */
     /* about section background */
 #about{
-    padding: 120px 0;
+    padding: 10px 0;
     position: relative;
+    padding-bottom: 20px;
 
-    background-image: url("professional/about-bg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    /* makes background static */
-    background-attachment: fixed;
+    
 }
 #services {
      
@@ -347,11 +349,86 @@
         font-size: 50px;     /* Adjusted for better hierarchy */
         font-weight: 600;
         color: #3473c0;      /* Logo Blue */
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         display: block;
         
     }
+/* --- Elite Work / Grayscale-to-Color Grid --- */
 
+#elite-work {
+    /* padding: 60px 0 100px; */
+    background-color: #ffffff47; /* Sets the white background seen in reference */
+    width: 100%;
+    padding: 10px 0; /* Adds breathing room inside the white bar */
+    margin: 5px 0;  /* Adds space between this and other sections */
+}
+
+.elite-title {
+    /* color: #000000 !important; Makes the title black against white background */
+    color: #3473c0;
+    text-align: center;
+    font-weight: 700;
+    /* margin-bottom: 50px; */
+    font-size: 40px;
+}
+
+.client-logo-grid {
+    display: grid;
+    /* This automatically arranges logos into dynamic columns */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px; /* Space between the logo cards */
+    justify-items: center; /* Centers logos horizontally in their grid cell */
+    align-items: center; /* Centers logos vertically in their grid cell */
+    max-width: 1100px; /* Limits overall grid width to match reference look */
+    margin: 0 auto; /* Centers the whole grid on the page */
+}
+
+/* Individual Logo Card Container */
+.logo-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Fixed height ensures uniform grid alignment */
+    width: 100%;
+}
+
+/* Base styling for all logos */
+.client-logo {
+    max-height: 60%; /* Prevents logos from touching the card edge */
+    max-width: 80%;
+    object-fit: contain; /* Ensures original aspect ratio is maintained */
+    
+    /* Transition creates the smooth "fade" effect between states */
+    transition: filter 0.5s ease, transform 0.3s ease;
+    
+    /* === KEY: Sets initial state to grayscale === */
+    filter: grayscale(100%);
+    opacity: 0.7; /* Slightly faded for better contrast */
+}
+
+/* === KEY: Hover State === */
+.logo-card:hover .client-logo {
+    /* Brings back full, original color */
+    filter: grayscale(0%);
+    opacity: 1; /* Full opacity */
+    
+    /* Subtle zoom effect seen in elite design */
+    transform: scale(1.05);
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 600px) {
+    .elite-title {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .client-logo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
+        
+    }
+}
      
 
     .who-we-are-container {
