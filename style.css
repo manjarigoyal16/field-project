@@ -379,7 +379,7 @@
     text-align: center;
 
     /* card background */
-    background: rgba(10, 10, 10, 0.85);
+    background: rgba(10, 10, 10, 0);
 
     /* premium glass blur */
     backdrop-filter: blur(10px);
