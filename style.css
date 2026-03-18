@@ -365,24 +365,9 @@
 
     /* --- Elite Work / Grayscale-to-Color Grid --- */
 
-    #elite-work {
-        /* padding: 60px 0 100px; */
+   
 
-        width: 100%;
-        padding: 10px 0;
-        /* Adds breathing room inside the white bar */
-        /* margin: 5px 0;  Adds space between this and other sections */
-        background: #5d689023;
-    }
-
-    .elite-title {
-        /* color: #000000 !important; Makes the title black against white background */
-        color: #3473c0;
-        text-align: center;
-        font-weight: 700;
-        /* margin-bottom: 50px; */
-        font-size: 40px;
-    }
+    
 
     .client-logo-grid {
         display: grid;
@@ -1768,3 +1753,102 @@
         }
 
     }
+
+    /* --- Elite Work Section --- */
+#elite-work {
+    padding: 10px 0;
+    
+    overflow: hidden; /* Hide the scrolling overflow */
+    position: relative;
+    
+
+        width: 100%;
+        
+        /* Adds breathing room inside the white bar */
+        /* margin: 5px 0;  Adds space between this and other sections */
+        /* background: #ffffff95; */
+        background-image: url("professional/about-bg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        /* makes background static */
+        background-attachment: fixed;
+        
+    
+}
+
+.elite-title {
+    text-align: center;
+    margin-bottom: 5px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: linear-gradient(to right, #fff, #3473c0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- Infinite Scroll Container --- */
+.client-logo-grid {
+    display: flex;
+    width: calc(250px * 10); /* Adjust based on number of logos */
+    animation: scroll 30s linear infinite;
+}
+
+/* Add a shadow gradient on the sides to make logos "fade in/out" */
+#elite-work::before,
+#elite-work::after {
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+#elite-work::before {
+    left: 0;
+    background: linear-gradient(to right, #05080d, transparent);
+}
+
+#elite-work::after {
+    right: 0;
+    background: linear-gradient(to left, #05080d, transparent);
+}
+
+/* --- Logo Cards --- */
+.logo-card {
+    width: 250px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-shrink: 0; /* Prevents logos from squishing */
+}
+
+.client-logo {
+    width: 160px;
+    filter: grayscale(100%) brightness(0.8); /* Cinematic muted look */
+    opacity: 0.6;
+    transition: all 0.5s ease;
+    object-fit: contain;
+}
+
+.logo-card:hover .client-logo {
+    filter: grayscale(0%) brightness(1); /* Lights up on hover */
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* --- Animation --- */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 5)); } /* Moves by half the logos */
+}
+
+/* Pause on hover so people can see the brand */
+.client-logo-grid:hover {
+    animation-play-state: paused;
+}
