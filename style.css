@@ -6,9 +6,8 @@
 
     }
 
-
     #bg {
-        background-image: url("professional/about-bg-img.png");
+        background-image: url("professional/about-bg.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -16,22 +15,6 @@
 
         background-attachment: fixed;
     }
-
-/* #bg {
-
-    background-image: url("professional/about-bg-img.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    
-    background-attachment: fixed;
-} */
-#bdy{
-    padding: 50px;
-
-}
-/* >>>>>>> Stashed changes */
 
     /* html {
         scroll-behavior: hidden;
@@ -115,81 +98,6 @@
         object-fit: cover;
         /* Ensures video fills the space without stretching */
     }
-    .back-card-video{
-         
-    width: 600px;
-    height: 550px;
-    object-fit: cover;
-}
-/* Header */
-.prjhead {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-}
-.description h1{
-    text-align: center;
-}
-.description p{
-    font-size: 20px;
-    text-align: justify;
-}
-
-/* Back Button Styling */
-.back-btn {
-    text-decoration: none;
-    background-color: black;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 6px;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.back-btn:hover {
-    background-color: #444;
-}
-
-/* Body Layout */
-.prjbdy {
-    display: flex;
-    gap: 210px;
-    align-items: center;
-    padding: 20px;
-     
-    
-}
-.prj{
-   padding-left: 100px;
-}
-.prjpage {
-    width: 100%;
-    height: 100vh; /* full viewport height */
-   
-    background-image: url("professional/about-bg-img.png");
-    /* tumhari uploaded image ka path */
-    background-size: cover;      /* full cover */
-    background-position: center; /* center align */
-    background-repeat: no-repeat; /* repeat nahi hoga */
-     background-attachment: fixed; 
-}
-
-/* Video Styling */
-.back-card-video {
-    width: 600px;
-    height: 550px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* Description */
-.description {
-    max-width: 500px;
-    font-size: 16px;
-    line-height: 1.6;
-}
-    
 
     .video-content {
         text-align: center;
@@ -665,7 +573,7 @@
 
   #services {
     padding: 10px 0;
-     background-image: url("professional/about-bg-img.png");
+     background-image: url("professional/about-bg.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -840,7 +748,7 @@
 
         position: relative;
 
-        background-image: url("professional/about-bg-img.png");
+        background-image: url("professional/about-bg.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -916,29 +824,6 @@
         background: #ffffff;
         width: 60px;
         height: 60px;
-        border-radius: 50%;
-        text-align: center;
-
-    }
-
-    .layer a i {
-        color: #3473c0;
-    }
-
-    .work:hover img {
-        transform: scale(1.1);
-
-    }
-
-    .work:hover .layer {
-        height: 100%;
-    }
-
-    @media only screen and (max-width: 600px) {
-        .work-list {
-            grid-template-columns: 1fr;
-            /* Force single column on small phones */
-         height: 60px;
         border-radius: 50%;
         text-align: center;
 
@@ -1959,4 +1844,3 @@
 .client-logo-grid:hover {
     animation-play-state: paused;
 }
-    }
