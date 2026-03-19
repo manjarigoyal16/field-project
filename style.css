@@ -1764,16 +1764,7 @@
 
         width: 100%;
         
-        /* Adds breathing room inside the white bar */
-        /* margin: 5px 0;  Adds space between this and other sections */
-        /* background: #ffffff95; */
-        background-image: url("professional/about-bg.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-
-        /* makes background static */
-        background-attachment: fixed;
+       
         
     
 }
@@ -1787,6 +1778,7 @@
     background: linear-gradient(to right, #fff, #3473c0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
 }
 
 /* --- Infinite Scroll Container --- */
