@@ -340,7 +340,7 @@
     /* about */
     /* about section background */
     #about {
-        padding: 30px 0;
+        padding: 80px 0;
         position: relative;
         padding-bottom: 20px;
 
@@ -1757,7 +1757,7 @@
   /* --- Main Container --- */
 #elite-work {
     padding: 60px 0;
-    background: #05080d;
+    /* background: #05080d; */
     overflow: hidden;
     position: relative;
 }
